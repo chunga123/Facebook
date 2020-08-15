@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["RNDNW"]); }
-
-__d("ContextualLayerAlignmentEnum",["keyMirror","objectValues","prop-types"],(function(a,b,c,d,e,f){"use strict";a=b("keyMirror")({left:null,center:null,right:null});c=b("objectValues")(a);d=b("prop-types").oneOf(c);e.exports=babelHelpers["extends"]({},a,{values:c,propType:d})}),null);
