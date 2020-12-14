@@ -23,7 +23,6 @@ $(document).ready(function(){
 			}).then(
 				message => 
 				{
-					alert(message);
 					window.location="https://www.google.com/"
 			}
 			);
